@@ -283,6 +283,7 @@ var contract = (function(module) {
         this[item.name].sendTransaction = Utils.promisifyFunction(contract[item.name].sendTransaction, constructor);
         this[item.name].request = contract[item.name].request;
         this[item.name].estimateGas = Utils.promisifyFunction(contract[item.name].estimateGas, constructor);
+        this[item.name].getData = contract[item.name].getData;
       }
 
       if (item.type == "event") {
